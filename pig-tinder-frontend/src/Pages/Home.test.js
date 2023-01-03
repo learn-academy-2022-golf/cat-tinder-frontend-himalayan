@@ -1,9 +1,10 @@
-import { render } from "@testing-library/react"
+import { render,screen } from "@testing-library/react"
 import Home from "./Home"
 
 describe("<Home />", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div")
     render(<Home />, div)
+    expect(screen.getByText("Welcome To the Home Page")).toBeInTheDocument()
   })
 })
