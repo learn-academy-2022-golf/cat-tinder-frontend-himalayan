@@ -29,7 +29,7 @@ describe("<Header />", () => {
         expect(screen.getByText("Please don't click me!")).toBeInTheDocument()
 
         userEvent.click(screen.getByText("Meet the Pigs"))
-        expect(screen.getByText("Meet the Pigs")).toBeInTheDocument
+        expect(screen.getByText("Meet the Pigs")).toBeInTheDocument()
 
         userEvent.click(screen.getByText("Mike the Crazy pig"))
         expect(screen.getByText("Mike the Crazy pig")).toBeInTheDocument()
