@@ -1,8 +1,45 @@
 import React from 'react'
-
-const PigIndex = () => {
+import {
+  Card, CardBody, CardSubtitle, CardTitle, Button
+}
+from "reactstrap"
+import { NavLink } from "react-router-dom"
+const PigIndex = ({pigs}) => {
+  console.log(pigs)
   return (
-    <div>PigIndex</div>
+    
+    <main className="pig-index-cards">
+      <div>
+    {pigs?.map((pig, index) => {
+      return (
+        <Card
+        style={{
+          width: '18rem'
+        }}
+        key={index}
+      >
+       <img alt={`profile of a pig named ${pig.name}`} src={pig.image} />
+        <CardBody>
+          <CardTitle tag="h5">
+            {pig.name}
+          </CardTitle>
+          <CardSubtitle
+            className="mb-2 text-muted"
+            tag="h6"
+          >
+            {pig.breed}
+          </CardSubtitle>
+          <NavLink to={`/PigShow/${pig.id}`} className="nav-link">
+          <Button>
+            See more about me
+          </Button>
+          </NavLink>
+        </CardBody>
+      </Card>
+      )
+    })}
+  </div>
+  </main>
   )
 }
 
