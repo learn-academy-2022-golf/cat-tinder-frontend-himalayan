@@ -37,7 +37,7 @@ function Header(args) {
     <Collapse isOpen={isOpen} navbar>
       <Nav className="me-auto" navbar>
         <NavItem>
-          <NavLink href="/Home/">Home</NavLink>
+          <NavLink href="/">Home</NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="https://www.dreamstime.com/guinea-pigs-cooked-grill-ecuador-traditional-delicious-food-south-america-roasted-pig-cuy-open-fire-ready-to-eat-image149311967">
