@@ -7,7 +7,8 @@ describe("<PigIndex />", () => {
   it("render a card for each pig", () => {
    
   render(
-  <PigIndex pigs={mockPigs} /> )
+    <BrowserRouter>
+  <PigIndex pigs={mockPigs} /> </BrowserRouter> )
   mockPigs.map((pig) => {
     const nameElement = screen.getByText(pig.name)
     expect(nameElement).toBeInTheDocument()
