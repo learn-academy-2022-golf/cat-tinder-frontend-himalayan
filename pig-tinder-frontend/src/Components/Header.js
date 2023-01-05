@@ -32,7 +32,7 @@ function Header(args) {
  
   <div>
   <Navbar {...args}>
-    <NavbarBrand href="/">Guinea Pigs of Flavor</NavbarBrand>
+    <NavbarBrand href="/">Guinea Pig Tinder... What pig is your match?</NavbarBrand>
     <NavbarToggler onClick={toggle} />
     <Collapse isOpen={isOpen} navbar>
       <Nav className="me-auto" navbar>
