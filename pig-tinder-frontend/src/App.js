@@ -25,7 +25,8 @@
         .catch((error) => console.error(error));
     };
     useEffect(() => {
-      fetchPigs()})
+      fetchPigs() 
+      }, [])
     // This function makes an HTTP POST request to create a new pig in your Rails app
     const createPig = (pig) => {
       fetch("http://localhost:3000/pigs", {
