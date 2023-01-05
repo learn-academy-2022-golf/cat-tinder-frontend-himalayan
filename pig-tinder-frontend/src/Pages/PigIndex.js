@@ -1,8 +1,10 @@
 import React from "react";
 import { Card, CardBody, CardSubtitle, CardTitle, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
-const PigIndex = ({ pigs }) => {
-  console.log(pigs);
+const PigIndex = ({ pigs}) => {
+  
+
+
   return (
     <main className="pig-index-cards">
       <div>
@@ -22,6 +24,9 @@ const PigIndex = ({ pigs }) => {
                 </CardSubtitle>
                 <NavLink to={`/PigShow/${pig.id}`} className="nav-link">
                   <Button>See more about me</Button>
+                </NavLink>
+                <NavLink to={`/PigEdit/${pig.id}`} className="nav-link">
+                  <Button>Edit Pig</Button>
                 </NavLink>
               </CardBody>
             </Card>

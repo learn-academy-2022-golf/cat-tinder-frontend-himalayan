@@ -52,7 +52,7 @@ const PigNew = ({ createPig }) => {
           <Label for="image">Image</Label>
           <Input
             type="url"
-            placeholder="What do yuo look like?"
+            placeholder="What do you look like?"
             name="image"
             onChange={handleChange}
             value={newPig.image}
