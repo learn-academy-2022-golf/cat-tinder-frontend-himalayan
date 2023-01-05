@@ -6,7 +6,9 @@ const PigIndex = ({ pigs}) => {
 
 
   return (
+    
     <main className="pig-index-cards">
+      
       <div>
         {pigs?.map((pig, index) => {
           return (
