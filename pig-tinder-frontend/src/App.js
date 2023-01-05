@@ -73,7 +73,7 @@
       .then((payload) => fetchPigs())
       .catch((errors) => console.log("delete errors:", errors))
   }
-
+  
   return (
     <>
       <Header />
@@ -84,7 +84,8 @@
         <Route path="/PigNew" element={<PigNew createPig={createPig} />} />
         <Route path="/PigEdit/:id" element={<PigEdit  updatePig={updatePig} pigs={pigs} />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      </Routes> 
+      
       <Footer />
     </>
   );

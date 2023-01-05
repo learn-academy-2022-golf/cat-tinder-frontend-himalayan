@@ -1,69 +1,32 @@
-import React, { useState } from 'react'
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from 'reactstrap'
-
-function Header(args) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => setIsOpen(!isOpen)
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Button } from "reactstrap";
+function Header() {
   return (
     <>
-    
-      <div id="parent">
-        <div id="NotFound"></div>
-        <div id="PigNew"></div>
+      <div
+        style={{
+          backgroundColor: "grey",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <NavLink to={`/PigIndex`} className="nav-link">
+          <Button style={{ backgroundColor: "orange" }}>Show All Pigs</Button>
+        </NavLink>
+        <NavLink to={`/`} className="nav-link">
+          <Button style={{ backgroundColor: "blue", textAlign: "center" }}>
+            Home
+          </Button>
+        </NavLink>
+        <NavLink to={`/PigNew`} className="nav-link">
+          <Button style={{ backgroundColor: "purple", textAlign: "center" }}>
+            Add to the mix
+          </Button>
+        </NavLink>
       </div>
-      
-
-
-
- 
-  <div>
-  <Navbar {...args}>
-    <NavbarBrand href="/">Guinea Pig Tinder... What pig is your match?</NavbarBrand>
-    <NavbarToggler onClick={toggle} />
-    <Collapse isOpen={isOpen} navbar>
-      <Nav className="me-auto" navbar>
-        <NavItem>
-          <NavLink href="/">Home</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="https://www.dreamstime.com/guinea-pigs-cooked-grill-ecuador-traditional-delicious-food-south-america-roasted-pig-cuy-open-fire-ready-to-eat-image149311967">
-            Please don't click me! 
-          </NavLink>
-        </NavItem>
-        <UncontrolledDropdown nav inNavbar>
-          <DropdownToggle nav caret>
-            Meet the Pigs
-          </DropdownToggle>
-          <DropdownMenu left>
-            <DropdownItem>Mike the Crazy pig</DropdownItem> 
-            <DropdownItem>Larry the Funny pig</DropdownItem>
-            <DropdownItem>Jerry the handicapped pig</DropdownItem>
-         
-            
-          </DropdownMenu>
-        </UncontrolledDropdown>
-      </Nav>
-      <NavbarText>Ways to eat the pigs</NavbarText>
-    </Collapse>
-  </Navbar>
-</div>
-</>
-)
+    </>
+  );
 }
 
-
-export default Header
+export default Header;

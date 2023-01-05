@@ -1,38 +1,21 @@
-import React, { useState } from 'react'
-
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Button } from "reactstrap";
 const Home = () => {
-  const [guineaPigs, setGuineaPigs] = useState([]) // Initialize empty array to store guinea pigs
-
-  const goToEdit = (index) => {
-    //edit page for the guinea pig at the given index
-  }
-
-  const seeIndex = () => {
-    //index page
-  }
-
-  const showExisting = () => {
-    //existing guinea pigs from an API and display them
-  }
-
-  const addNew = () => {
-    //for adding a new guinea pig
-  }
 
   return (
-    <div>
-      <div style={{ fontSize: '20px', color: 'blue' }}>Welcome To Guinea Pigs of the World</div>
-      <button onClick={seeIndex} style={{ backgroundColor: 'green' }}>See The Pigs</button>
-      <button onClick={showExisting} style={{ backgroundColor: 'orange' }}>Show All Pigs</button>
-      <button onClick={addNew} style={{ backgroundColor: 'purple' }}>Add to the mix</button>
-      {guineaPigs.map((guineaPig, index) => (
-        <div key={guineaPig.id} style={{ border: '1px solid black' }}>
-          <div style={{ fontWeight: 'bold' }}>{guineaPig.name}</div>
-          <button onClick={() => goToEdit(index)} style={{ color
-     </div>
-      ))}
-     </div>
-  )
-}
+    <>
+      <div style={{ fontSize: "20px", color: "blue", textAlign:"center"}}>
+        Welcome To Guinea Pigs of the World
+      </div>
+     
+      <img src="https://pariwana-hostel.com/media/filer_public_thumbnails/filer_public/e7/1e/e71e084e-c551-4f8c-8838-d6cf7fac41ca/exotic-peruvian-food-guinea-pig-pariwana-hostel-02.jpg__1170x0_q85_subsampling-2_upscale.jpg" style={{height:"auto", width:"100%", opacity:"90%"}} alt="Guinea Pig Pen"></img>
+      {/* {guineaPigs.map((guineaPig, index) => {
+        return(
+        <div key={guineaPig.id} style={{ border: '1px solid black' }}></div>)})} */}
+      
+    </>
+  );
+};
 
-export default Home
+export default Home;

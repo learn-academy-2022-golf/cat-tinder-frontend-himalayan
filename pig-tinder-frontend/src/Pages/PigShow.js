@@ -17,7 +17,7 @@ const PigShow = ({ pigs, deletePig }) => {
   const pig = pigs?.find((pig) => pig.id === +id);
 
   return (
-    <Card className="my-2">
+    <Card className="my-2" style={{width:"350px", margin:"auto"}}>
       <CardImg
         alt="Card image cap"
         src={pig.image}
